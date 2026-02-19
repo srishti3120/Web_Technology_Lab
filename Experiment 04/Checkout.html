@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zen & Zest | Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.jpg" sizes="32x32" type="image/jpeg">
+</head>
+<body>
+
+    <nav>
+        <a href="Experiment 04.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="Login.html">Login</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+
+    <div class="checkout-card">
+        <h2>🛍️ Checkout</h2>
+
+        <form action="Purchase.html">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="username" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Address</label>
+                <textarea name="address" rows="4" placeholder="Enter your address" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Payment Method</label>
+                <select name="payment">
+                    <option value="cod">Cash on Delivery</option>
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="upi">UPI</option>
+                    <option value="netbanking">Net Banking</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <input type="submit" value="Confirm Purchase" class="confirm-btn">
+                <input type="reset" value="Reset" class="reset-btn">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

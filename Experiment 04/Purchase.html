@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zen & Zest | Purchase Successful</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.jpg" sizes="32x32" type="image/jpeg">
+</head>
+<body>
+
+    <nav>
+        <a href="Experiment 04.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="Login.html">Login</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+
+    <!-- Spinner Container -->
+    <div id="loader" class="spinner-container">
+        <div class="spinner"></div>
+        <p>Processing your order...</p>
+    </div>
+
+    <!-- Success Card -->
+    <div class="success-card" id="success-card" style="display: none;">
+        <div class="checkmark">✔</div>
+        <h2>Order Placed Successfully!!</h2>
+        <p class="thankyou">Thank you for shopping with us 💖</p>
+
+        <div class="contact-info">
+            <p><b>Need help?</b></p>
+            <p>📞 9099122334</p>
+            <p>
+                📧 
+                <a href="mailto:abc@gmail.com">abc@gmail.com</a>
+            </p>
+        </div>
+
+        <a href="Categories.html" class="home-btn">Continue Shopping</a>
+    </div>
+
+    <script>
+        // Show spinner for 2.5 seconds, then display success card
+        setTimeout(() => {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('success-card').style.display = 'block';
+        }, 2500);
+    </script>
+
+</body>
+
+</html>
