@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Hide checkbox */
+#toggle {
+    display: none;
+}
+
+.layout {
+    display: block;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(12px);
+    padding: 30px 15px;
+    transition: width 0.4s ease;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 220px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(12px);
+    padding: 30px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transition: transform 0.4s ease;
+}
+
+/* Hide sidebar completely */
+.sidebar {
+    transform: translateX(-100%);
+}
+
+/* Show when toggled */
+#toggle:checked ~ .layout .sidebar {
+    transform: translateX(0);
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #c552d6;
+    margin-bottom: 30px;
+}
+
+/* Nav links */
+.sidebar nav a {
+    display: block;
+    text-decoration: none;
+    color: #2c2c2c;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+    background: rgba(227, 183, 136, 0.2);
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    position: relative;
+}
+
+/* Menu button */
+.menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    color: black;
+}
