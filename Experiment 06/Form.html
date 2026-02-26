@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<fieldset style="border: 5px solid powderblue;"> 
+<legend> Registration Form </legend>
+<link rel="stylesheet" href="Form.css"/>
+<form>
+    <label> Full Name* </label><br>
+    <input type="text" id="name" placeholder="John Doe" required/>
+    <br><br><br>
+
+    <label> Email* </label><br>
+    <input type="email" id="email" placeholder="john@example.com" required/>
+    <br><br><br>
+
+    <label> Date of Birth </label><br>
+    <input type="date" id="dob"/>
+    <br><br><br>
+
+    <label>Hobbies:</label><br>
+    <input type="checkbox" name="hobby" value="Reading"> Reading
+    <input type="checkbox" name="hobby" value="Sports"> Sports
+    <input type="checkbox" name="hobby" value="Music"> Music
+    <input type="checkbox" name="hobby" value="Movies"> Movies
+    <input type="checkbox" name="hobby" value="Travel"> Travel
+    <input type="checkbox" name="hobby" value="Writing"> Writing
+    <br><br><br>
+
+    <label> Gender </label><br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <br><br><br>
+
+    <input type="checkbox"/> I agree to terms* 
+    <br><br><br>
+
+    <button type="button" onclick="printForm()">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+</fieldset>
+
+<h3>Output:</h3>
+<div id="output" style="border: 5px solid powderblue; padding: 15px; margin-top: 20px; width: fit-content; min-width: 300px;"></div>
+
+<script>
+function printForm() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let dob = document.getElementById("dob").value;
+
+  let gender = "";
+  let genders = document.getElementsByName("gender");
+  for (let g of genders) {
+    if (g.checked) {
+      gender = g.value;
+    }
+  }
+
+  let hobbies = [];
+  let hobbyList = document.getElementsByName("hobby");
+  for (let h of hobbyList) {
+    if (h.checked) {
+      hobbies.push(h.value);
+    }
+  }
+
+  document.getElementById("output").innerHTML =
+    `<b>Name:</b> ${name} <br>
+     <b>Email:</b> ${email} <br>
+     <b>Gender:</b> ${gender} <br>
+     <b>Hobbies:</b> ${hobbies.join(", ")} <br>
+     <b>DOB:</b> ${dob}`;
+}
+</script>
