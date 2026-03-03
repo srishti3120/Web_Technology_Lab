@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Timer.css">
+  <title></title>
+</head>
+<body>
+  <body>
+  <div class="container">
+    <h1 id="heading">Timer</h1>
+    <div class="buttons">
+      <button onclick="StartTimer()">Start</button>
+      <button onclick="ResetTimer()">Reset</button>
+      <button onclick="StopTimer()">Stop</button>
+    </div>
+  </div>
+</body>
+  <script>
+    let timer;
+    let count = 0;
+
+    function StartTimer() {
+      clearInterval(timer);  
+      timer = setInterval(function() {
+      count++;
+      document.getElementById("heading").textContent = count;
+      }, 1000);
+    }
+
+    function ResetTimer() {
+      clearInterval(timer);
+      count = 0;
+      document.getElementById("heading").textContent = count;
+    }
+
+    function StopTimer() {
+      clearInterval(timer);
+    }
+  </script>
+</body>
+</html>
