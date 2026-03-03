@@ -1,12 +1,20 @@
 /* Page Styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+
+  background: 
+    url("Formbg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px;
-  color: #333;
+  color: #000000;
 }
 
 /* Fieldset Box */
@@ -19,13 +27,6 @@ fieldset {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Legend Title */
-legend {
-  font-size: 24px;
-  font-weight: 600;
-  color: #6a8caf;
-  padding: 0 10px;
-}
 
 /* Labels */
 label {
@@ -51,9 +52,9 @@ input[type="date"] {
 /* Focus effect */
 input:focus {
   outline: none;
-  border-color: #9bb7d4;
+  border-color: #7f9fb8;
+box-shadow: 0 0 8px rgba(127, 159, 184, 0.35);
   background: #fff;
-  box-shadow: 0 0 8px rgba(155, 183, 212, 0.4);
 }
 
 /* Checkbox & Radio styling spacing */
@@ -61,7 +62,7 @@ input[type="checkbox"],
 input[type="radio"] {
   margin-right: 6px;
   transform: scale(1.1);
-  accent-color: #9bb7d4;
+ accent-color: #7f9fb8;
 }
 
 /* Button Styling */
@@ -78,14 +79,14 @@ button {
 
 /* Submit Button */
 button[type="button"] {
-  background: #9bb7d4;
+  background: #7f9fb8;
   color: white;
 }
 
 button[type="button"]:hover {
-  background: #7fa3c7;
+  background: #6f8fa8;
+box-shadow: 0 5px 15px rgba(111, 143, 168, 0.4);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(127, 163, 199, 0.4);
 }
 
 /* Reset Button */
@@ -114,5 +115,5 @@ button[type="reset"]:hover {
 
 /* Output headings */
 #output b {
-  color: #6a8caf;
+  background: rgba(255,255,255,0.95);
 }

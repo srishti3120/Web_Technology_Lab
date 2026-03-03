@@ -12,12 +12,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #f3f4f7, #e0e7ff);
+
+  background-image: url("indexbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Navigation container */
 nav {
-  background: white;
+  background: rgba(163, 161, 161, 0.696); /* slightly transparent */
+  backdrop-filter: blur(10px);          /* glass effect */
+
   padding: 20px 40px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -25,12 +31,13 @@ nav {
   gap: 40px;
 }
 
+
 /* Navigation links */
 nav a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
-  color: #4f46e5;
+  color: #fdfdfd;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -43,12 +50,12 @@ nav a::after {
   bottom: -6px;
   width: 0%;
   height: 3px;
-  background: #4f46e5;
+  background: #9a3702;
   transition: width 0.3s ease;
 }
 
 nav a:hover {
-  color: #1e1b4b;
+  color: #050505;
 }
 
 nav a:hover::after {

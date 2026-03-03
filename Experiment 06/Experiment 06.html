@@ -8,7 +8,36 @@
 </head>
 
 <body>
-<nav>
-<a href="Form.html">Form</a>
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="bgvideo.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay"></div>
+
+  <!-- Cube Image + Button -->
+  <div class="hero">
+    <a href="Form.html">
+      <button class="form-btn">Form</button>
+    </a>
+  </div>
+
+  <div class="scene">
+  <div class="cube">
+    <div class="face front"></div>
+    <div class="face back"></div>
+    <div class="face right"></div>
+    <div class="face left"></div>
+    <div class="face top"></div>
+    <div class="face bottom"></div>
+  </div>
+</div>
+  <script>
+    document.addEventListener("mousemove", function (e) {
+      document.body.style.setProperty("--x", e.clientX + "px");
+      document.body.style.setProperty("--y", e.clientY + "px");
+    });
+  </script>
+
 </body>
 </html>
