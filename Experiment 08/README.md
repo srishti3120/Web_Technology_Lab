@@ -47,7 +47,7 @@ Set up a PHP development environment using XAMPP and verify the installation.
   * Loaded PHP extensions
 * Practised security by deleting the `phpinfo()` file after use
 
-➡️ [View Exercise 01 Files & Outputs](./Exercise 01/)
+➡️ [View Exercise 01 Files & Outputs](./Exercise%2001/)
 
 ---
 
@@ -73,7 +73,7 @@ Learned to run PHP without XAMPP using the built-in development server.
 * Created multiple PHP files (`index.php`, `about.php`)
 * Observed request logs in terminal
 
-➡️ [View Exercise 02 Files & Outputs](./Exercise 02/)
+➡️ [View Exercise 02 Files & Outputs](./Exercise%2002/)
 
 ---
 
@@ -98,7 +98,7 @@ Practised core PHP concepts including variables, constants, and data types.
   * `is_*()` functions
 * Displayed associative array using `print_r()`
 
-➡️ [View Exercise 03 Files & Outputs](./Exercise 03/)
+➡️ [View Exercise 03 Files & Outputs](./Exercise%2003/)
 
 ---
 
@@ -124,13 +124,13 @@ Built a styled PHP page displaying system and server information.
 * Styled the page using basic CSS
 * Added note about PHP execution behavior
 
-➡️ [View Exercise 04 Files & Outputs](./Exercise 04/)
+➡️ [View Exercise 04 Files & Outputs](./Exercise%2004/)
 
 ---
 
 ## 📸 Project Structure
 
-![Project Folder](folder structure.png)
+![Project Folder](folder%20structure.png)
 
 ---
 
