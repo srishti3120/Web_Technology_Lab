@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Assuming Array.css is used for styling from previous labs, otherwise you can define styles here -->
+    <style>
+        fieldset {
+            border: 5px solid powderblue;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<fieldset> 
+<legend> Registration Form </legend>
+<!-- Form now submits to submit.php via POST method -->
+<form method="POST" action="submit.php">
+    <label> Full Name* </label><br>
+    <input type="text" id="name" name="name" placeholder="John Doe" required/>
+    <br><br>
+
+    <label> Email* </label><br>
+    <input type="email" id="email" name="email" placeholder="john@example.com" required/>
+    <br><br>
+
+    <label> Date of Birth </label><br>
+    <input type="date" id="dob" name="dob"/>
+    <br><br>
+
+    <!-- Changed name to "hobby[]" so PHP receives multiple checked values as an array -->
+    <label>Hobbies:</label><br>
+    <input type="checkbox" name="hobby[]" value="Reading"> Reading
+    <input type="checkbox" name="hobby[]" value="Sports"> Sports
+    <input type="checkbox" name="hobby[]" value="Music"> Music
+    <input type="checkbox" name="hobby[]" value="Movies"> Movies
+    <input type="checkbox" name="hobby[]" value="Travel"> Travel
+    <input type="checkbox" name="hobby[]" value="Writing"> Writing
+    <br><br>
+
+    <label> Gender </label><br>
+    <!-- Made gender required to avoid missing values -->
+    <input type="radio" name="gender" value="Male" required> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <br><br>
+
+    <input type="checkbox" name="terms" required/> I agree to terms* 
+    <br><br>
+
+    <!-- Changed to type="submit" to trigger the form submission -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+</fieldset>
+
+</body>
+</html>
